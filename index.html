@@ -1,21 +1,497 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" class="scroll-smooth">
   <head>
-    <title>ITutor Peru - Academia Virtual</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="/build.css" rel="stylesheet" />
+    <link href="/styles/output.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/custom.css" />
+    <script
+      src="https://kit.fontawesome.com/92b62ee1cc.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.7/dist/cdn.min.js"
+    ></script>
+    <title>ITutor Peru - Academia Virtual</title>
   </head>
 
-  <body>
+  <body class="box-border">
     <div
-      class="h-screen w-screen flex justify-center items-center bg-[url('/assets/background.webp')] bg-cover bg-no-repeat bg-center"
+      class="flex flex-col items-center justify-center bg-[url('/assets/background.webp')] bg-cover bg-center bg-no-repeat"
+      id="inicio"
     >
-      <div class="flex flex-col text-white items-center gap-y-4">
-        <img class="h-auto max-w-xs md:max-w-sm" src="assets/icono1.png" />
-        <p class="text-4xl font-bold">Trabajando...</p>
-        <p class="text-2xl">Muy pronto</p>
-      </div>
+      <header
+        x-data="{navbarToggled: false}"
+        class="sticky top-0 z-10 flex w-full md:top-0 md:bg-black/[.2] md:px-8"
+      >
+        <div
+          class="absolute top-0 flex w-full flex-1 flex-col py-4 text-3xl text-white md:hidden"
+          :class="navbarToggled ? 'bg-purple-900' : 'bg-black/[.2]'"
+        >
+          <i
+            class="fa-solid fa-bars ml-auto pr-4 hover:opacity-75"
+            x-on:click="navbarToggled = !navbarToggled"
+          ></i>
+          <div
+            x-show="navbarToggled"
+            class="ml-auto flex w-full flex-col justify-center gap-4 bg-purple-900 py-4 text-center font-bold text-white"
+          >
+            <a
+              href="#inicio"
+              class="text-lg underline-offset-8 hover:underline hover:opacity-75"
+              @click="navbarToggled = false"
+              >Inicio</a
+            >
+            <a
+              href="#somos"
+              @click="navbarToggled = false"
+              class="text-lg underline-offset-8 hover:underline hover:opacity-75"
+              >¿Quiénes Somos?</a
+            >
+            <a
+              href="#servicios"
+              @click="navbarToggled = false"
+              class="text-lg underline-offset-8 hover:underline hover:opacity-75"
+              >Nuestros Servicios</a
+            >
+            <a
+              href="#beneficios"
+              @click="navbarToggled = false"
+              class="text-lg underline-offset-8 hover:underline hover:opacity-75"
+              >Nuestros Beneficios</a
+            >
+            <a
+              href="#contacto"
+              @click="navbarToggled = false"
+              class="text-lg underline-offset-8 hover:underline hover:opacity-75"
+              >Contacto
+            </a>
+          </div>
+        </div>
+        <div
+          class="ml-auto hidden w-fit gap-8 self-end font-bold text-white md:flex"
+        >
+          <a
+            href="#inicio"
+            class="text-nowrap py-6 text-lg underline-offset-8 hover:underline hover:opacity-75"
+            >Inicio</a
+          >
+          <a
+            href="#somos"
+            class="text-nowrap py-6 text-lg underline-offset-8 hover:underline hover:opacity-75"
+            >¿Quiénes Somos?</a
+          >
+          <a
+            href="#servicios"
+            class="text-nowrap py-6 text-lg underline-offset-8 hover:underline hover:opacity-75"
+            >Nuestros Servicios</a
+          >
+          <a
+            href="#beneficios"
+            class="text-nowrap py-6 text-lg underline-offset-8 hover:underline hover:opacity-75"
+            >Nuestros Beneficios</a
+          >
+          <a
+            href="#contacto"
+            class="text-nowrap py-6 text-lg underline-offset-8 hover:underline hover:opacity-75"
+            >Contacto
+          </a>
+        </div>
+      </header>
+      <section class="flex h-screen w-full flex-col">
+        <div
+          class="absolute bottom-0 mx-auto mb-8 flex w-full items-center justify-center"
+        >
+          <div
+            class="flex gap-4 rounded-xl bg-white p-2 px-3 text-xl font-bold text-purple-600"
+          >
+            <i
+              class="fa-solid fa-chevron-down self-end motion-safe:animate-bounce"
+            ></i>
+            <span>Desliza para saber más</span>
+          </div>
+        </div>
+        <section
+          class="mb-32 grid h-full grid-rows-1 place-items-center gap-x-32 md:px-4 lg:grid-cols-5 lg:grid-rows-1 xl:px-16"
+        >
+          <div class="flex flex-col gap-4 md:gap-16 lg:col-span-3">
+            <img
+              class="object-fit mx-auto h-32 md:h-48 xl:h-72"
+              src="assets/icono1.png"
+            />
+            <h2
+              class="text-center text-4xl text-white sm:text-5xl lg:text-start lg:text-5xl"
+            >
+              Sumérgete en una educación
+              <span class="font-bold text-yellow-300">personalizada </span> de
+              <span class="font-bold text-yellow-300">calidad</span>
+            </h2>
+
+            <h2
+              class="mt-8 text-center font-['Dancing_Script'] text-3xl font-bold text-white sm:text-5xl lg:text-start lg:text-5xl xl:mt-8"
+            >
+              ✨ Estudia a tu manera✨
+            </h2>
+          </div>
+          <div
+            class="col-span-2 mt-8 hidden h-full w-full flex-col items-center justify-center gap-y-4 lg:flex"
+          >
+            <div class="flex h-5/6 items-center justify-center">
+              <picture class="h-fit rounded-full bg-white p-16">
+                <img
+                  class="mx-auto h-full object-contain"
+                  src="assets/bienvenido.png"
+                />
+              </picture>
+            </div>
+          </div>
+        </section>
+      </section>
+      <section
+        class="flex h-screen w-full flex-col gap-4 px-4 py-24 sm:px-16"
+        id="servicios"
+      >
+        <div class="flex flex-col text-white sm:gap-32 lg:gap-2 xl:gap-8">
+          <div class="flex flex-col gap-4">
+            <p class="text-4xl font-bold sm:text-6xl">Nuestros Servicios</p>
+            <div class="h-2 w-64 bg-white"></div>
+          </div>
+          <div
+            class="mt-8 grid items-center justify-center gap-y-4 sm:gap-y-6 xl:gap-y-8"
+            id="cursos"
+          >
+            <div class="relative grid items-center gap-x-16 lg:grid-cols-5">
+              <div></div>
+              <div
+                class="col-span-3 flex flex-col gap-2 rounded-xl bg-white px-4 py-4 text-purple-800"
+              >
+                <span
+                  class="text-center text-lg font-bold sm:text-2xl xl:text-5xl"
+                  >Reforzamiento en Matemática</span
+                >
+                <span class="text-center sm:text-xl xl:text-2xl"
+                  >Razonamiento Matemático, Geometría, Trigonometría,
+                  Aritmética, Álgebra y Estadística</span
+                >
+              </div>
+              <div class="hidden h-16 w-full lg:flex">
+                <img
+                  src="assets/matematicas-derecha.png"
+                  class="object-fit h-36 -translate-y-16 rotate-12 xl:h-52"
+                />
+              </div>
+            </div>
+            <div class="grid items-center gap-x-16 lg:grid-cols-5">
+              <div class="items hidden h-16 w-full justify-end lg:flex">
+                <img
+                  src="assets/libro-derecha.png"
+                  class="h-52 -translate-y-24 rotate-12 object-contain"
+                />
+              </div>
+              <div
+                class="col-span-3 flex flex-col gap-2 rounded-xl bg-white px-4 py-4 text-purple-800"
+              >
+                <span
+                  class="text-center text-lg font-bold sm:text-2xl xl:text-5xl"
+                  >Reforzamiento en Letras</span
+                >
+                <span class="text-center sm:text-xl xl:text-2xl"
+                  >Historia Universal, Historia del Perú, Lenguaje, Geografía,
+                  entre otros</span
+                >
+              </div>
+            </div>
+            <div class="grid items-center gap-x-16 lg:grid-cols-5">
+              <div></div>
+              <div
+                class="col-span-3 flex flex-col gap-2 rounded-xl bg-white px-4 py-4 text-purple-800"
+              >
+                <span
+                  class="text-center text-lg font-bold sm:text-2xl xl:text-5xl"
+                  >Reforzamiento en Ciencias</span
+                >
+                <span class="text-center sm:text-xl xl:text-2xl"
+                  >Física y Química</span
+                >
+              </div>
+              <div class="hidden h-16 lg:flex">
+                <img
+                  src="assets/ciencias.png"
+                  class="object-fit h-36 -translate-y-16 rotate-12 xl:h-52"
+                />
+              </div>
+            </div>
+            <div class="grid items-center gap-x-16 lg:grid-cols-5">
+              <div class="hidden h-16 w-full justify-end lg:flex">
+                <img
+                  src="assets/ingles-derecha.png"
+                  class="object-fit h-48 -translate-y-32 -rotate-12 xl:h-52 xl:-translate-y-24"
+                />
+              </div>
+              <div
+                class="col-span-3 flex flex-col gap-2 rounded-xl bg-white px-4 py-4 text-purple-800"
+              >
+                <span
+                  class="text-center text-lg font-bold sm:text-2xl xl:text-5xl"
+                  >Idioma Extranjero</span
+                >
+                <span class="text-center sm:text-xl xl:text-2xl">Inglés</span>
+              </div>
+              <div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="mt-8 flex h-screen flex-col gap-8 px-4 pb-8 pt-32 md:gap-8 lg:px-8 xl:gap-16"
+        id="somos"
+      >
+        <div class="flex gap-1 sm:gap-2 sm:px-8 lg:gap-16">
+          <div class="flex flex-1 flex-col gap-8 text-white lg:gap-4">
+            <div class="flex flex-col gap-6">
+              <p class="text-nowrap text-4xl font-bold sm:text-6xl">
+                ¿Quiénes Somos?
+              </p>
+              <div class="h-2 w-64 bg-white"></div>
+            </div>
+            <div class="flex items-center">
+              <p class="text-xl sm:text-3xl lg:text-2xl xl:text-4xl">
+                Somos una academia, la cual se diferencia por su particular
+                manera de enseñanza. Esta nueva forma de enseñanza tiene como
+                <span class="font-bold text-yellow-300"
+                  >foco principal la participación activa del alumno durante
+                  toda la sesión de clases.</span
+                >
+              </p>
+              <img
+                class="hidden h-56 object-contain sm:block md:w-64"
+                src="assets/hola.png"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="flex gap-8 lg:gap-16">
+          <img
+            class="object-fit my-auto hidden h-52 sm:block lg:h-48 xl:h-56"
+            src="assets/maguivel.png"
+          />
+
+          <p class="text-xl text-white sm:text-3xl lg:text-2xl xl:text-4xl">
+            De esa manera, se convierte la enseñanza clásica unilateral a una
+            <span class="font-bold text-yellow-300"
+              >enseñanza bilateral o multilateral</span
+            >. De este modo, las horas de clases son
+            <span class="font-bold text-yellow-300"
+              >conversación activa con el estudiante</span
+            >. Por otro lado, el
+            <span class="font-bold text-yellow-300">seguimiento constante</span>
+            y posibilidad de mandar sus dudas en cualquier momento
+            <span class="font-bold text-yellow-300"
+              >potenciará los resultados</span
+            >.
+          </p>
+        </div>
+      </section>
+      <section
+        class="mt-8 flex flex-col gap-16 px-4 pt-32 sm:h-screen sm:pb-8"
+        id="beneficios"
+      >
+        <div class="flex flex-col gap-8 xl:gap-12">
+          <div class="flex flex-col gap-4 text-white">
+            <p class="max-sm:text-nowrap text-4xl font-bold sm:text-6xl">
+              Nuestros Beneficios
+            </p>
+            <div class="h-2 w-64 bg-white"></div>
+          </div>
+          <div
+            class="grid flex-1 justify-center gap-4 max-sm:grid-cols-1 max-sm:grid-rows-1 sm:grid-cols-6 2xl:gap-6"
+          >
+            <div
+              class="flex flex-col gap-2 rounded-xl bg-white p-4 text-purple-800 sm:col-span-3"
+            >
+              <div class="flex flex-col gap-2">
+                <i
+                  class="fa-regular fa-calendar text-3xl sm:text-4xl xl:text-6xl"
+                ></i>
+                <p
+                  class="text-center font-bold underline underline-offset-8 sm:text-lg sm:text-xl 2xl:text-3xl"
+                >
+                  Horarios Flexibles
+                </p>
+              </div>
+              <p class="text-center text-lg 2xl:text-2xl">
+                iTutor.Perú se adapta a disponibilidad de tiempo del estudiante.
+              </p>
+            </div>
+
+            <div
+              class="flex flex-col gap-2 rounded-xl bg-white p-4 text-purple-800 sm:col-span-3"
+            >
+              <div class="flex flex-col gap-2">
+                <i
+                  class="fa-regular fa-eye text-3xl sm:text-4xl xl:text-6xl"
+                ></i>
+                <p
+                  class="text-center font-bold underline underline-offset-8 sm:text-xl 2xl:text-3xl"
+                >
+                  Seguimiento constante
+                </p>
+              </div>
+              <p class="text-center text-lg 2xl:text-2xl">
+                iTutor.Perú le ofrece un seguimiento constante mediante los
+                canales de comunicación
+              </p>
+            </div>
+            <div
+              class="flex flex-col justify-between gap-2 rounded-xl bg-white p-4 text-purple-800 sm:col-span-2"
+            >
+              <div class="flex flex-col gap-2">
+                <i
+                  class="fa-solid fa-chart-simple text-3xl sm:text-4xl xl:text-6xl"
+                ></i>
+                <p
+                  class="text-center font-bold underline underline-offset-8 sm:text-xl 2xl:text-3xl"
+                >
+                  Evaluaciones personalizadas
+                </p>
+              </div>
+              <p class="text-center text-lg 2xl:text-2xl">
+                iTutor.Perú realiza evaluaciones personalidazas para ver el
+                desempeño
+              </p>
+            </div>
+            <div
+              class="flex flex-col justify-between gap-2 rounded-xl bg-white p-4 text-purple-800 sm:col-span-2"
+            >
+              <div class="flex flex-col gap-2">
+                <i
+                  class="fa-solid fa-list-check text-3xl sm:text-4xl xl:text-6xl"
+                ></i>
+                <p
+                  class="text-center font-bold underline underline-offset-8 sm:text-xl 2xl:text-3xl"
+                >
+                  Organización personalizada
+                </p>
+              </div>
+              <p class="text-center text-lg 2xl:text-2xl">
+                iTutor.Perú le crea un horario personalizado al estudiante según
+                sus actividades académicas y no académicas.
+              </p>
+            </div>
+            <div
+              class="flex flex-col justify-between gap-2 rounded-xl bg-white p-4 text-purple-800 sm:col-span-2"
+            >
+              <div class="flex flex-col gap-2">
+                <i
+                  class="fa-solid fa-globe text-3xl sm:text-4xl xl:text-6xl"
+                ></i>
+                <p
+                  class="text-center font-bold underline underline-offset-8 sm:text-xl 2xl:text-3xl"
+                >
+                  Conectividad con consultoría de estudio en el extranjero
+                </p>
+              </div>
+              <p class="text-center text-lg 2xl:text-2xl">
+                iTutor.Perú le ofrece descuentos en Samantha Consulting, quien
+                lo ayudará si desea estudiar en el exterior
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="mt-16 flex w-full flex-col px-8 pb-8 sm:mt-8 sm:h-screen sm:gap-8 sm:pt-32 xl:gap-16"
+        id="contacto"
+      >
+        <div class="flex w-full flex-col gap-12 xl:gap-16">
+          <div class="flex flex-col items-center gap-4 text-white">
+            <p class="max-sm:text-nowrap text-4xl font-bold sm:text-6xl">
+              Contacto
+            </p>
+            <div class="h-2 w-64 bg-white"></div>
+          </div>
+        </div>
+        <div
+          class="flex justify-between px-8 max-lg:flex-col xl:px-32"
+          id="maguiveles"
+        >
+          <div
+            class="mt-8 flex h-fit flex-col items-center gap-y-2 text-white xl:gap-y-4"
+          >
+            <img
+              class="h-40 object-contain sm:h-64 xl:h-72 2xl:h-96"
+              src="assets/laptop-derecha.png"
+            />
+            <div class="flex gap-6" id="redes">
+              <a
+                href="https://wa.link/c5rja0"
+                target="_blank"
+                class="hover:opacity-75"
+              >
+                <img
+                  src="assets/whatsapp-logo.svg"
+                  alt="whatsapp"
+                  class="object-fit h-12 sm:h-20 xl:h-24"
+                />
+              </a>
+              <a
+                href="https://www.facebook.com/profile.php?id=100076240032518"
+                class="text-blue-500 hover:opacity-75"
+                target="_blank"
+              >
+                <img
+                  src="assets/facebook-logo.svg"
+                  alt="facebook"
+                  class="object-fit h-12 sm:h-20 xl:h-24"
+                />
+              </a>
+              <a
+                href="https://www.instagram.com/itutor.peru"
+                target="_blank"
+                class="hover:opacity-75"
+              >
+                <img
+                  src="assets/instagram-logo.svg"
+                  alt="instagram"
+                  class="object-fit h-12 sm:h-20 xl:h-24"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="mt-8 flex h-fit flex-col items-center gap-y-4 text-white">
+            <img
+              class="h-40 object-contain sm:h-64 xl:h-72 2xl:h-96"
+              src="assets/telefono derecha.png"
+            />
+
+            <div id="numeros" class="flex flex-col gap-2 font-bold xl:gap-8">
+              <a
+                href="tel:+51975339804"
+                class="flex items-center gap-4 text-3xl hover:opacity-75 sm:text-4xl xl:text-5xl"
+              >
+                <i class="fa-solid fa-phone"></i>
+                <span class="text-nowrap">975 339 804</span>
+              </a>
+              <a
+                href="tel:+51971523514"
+                class="flex items-center gap-4 text-3xl hover:opacity-75 sm:text-4xl xl:text-5xl"
+              >
+                <i class="fa-solid fa-phone"></i>
+                <span class="text-nowrap">971 523 514</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   </body>
 </html>
