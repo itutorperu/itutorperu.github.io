@@ -3,13 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="/styles/output.css" rel="stylesheet" />
+    <link href="./styles/output.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap"
       rel="stylesheet"
     />
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <link rel="stylesheet" href="styles/custom.css" />
     <script
       src="https://kit.fontawesome.com/92b62ee1cc.js"
@@ -122,9 +123,9 @@
         <section
           class="mb-32 grid h-full grid-rows-1 place-items-center gap-x-32 md:px-4 lg:grid-cols-5 lg:grid-rows-1 xl:px-16"
         >
-          <div class="flex flex-col gap-4 md:gap-16 lg:col-span-3">
+          <div class="flex flex-col gap-4 md:gap-8 lg:col-span-3 2xl:gap-16">
             <img
-              class="object-fit mx-auto h-32 md:h-48 xl:h-72"
+              class="object-fit lg:64 mx-auto h-32 md:h-48 2xl:h-72"
               src="assets/icono1.png"
             />
             <h2
@@ -156,28 +157,30 @@
         </section>
       </section>
       <section
-        class="flex h-screen w-full flex-col gap-4 px-4 py-24 sm:px-16"
+        class="flex min-h-screen w-full flex-col gap-4 px-4 py-24 sm:px-16"
         id="servicios"
       >
-        <div class="flex flex-col text-white sm:gap-32 lg:gap-2 xl:gap-8">
+        <div class="flex flex-col text-white sm:gap-32 lg:gap-0 2xl:gap-8">
           <div class="flex flex-col gap-4">
-            <p class="text-4xl font-bold sm:text-6xl">Nuestros Servicios</p>
+            <p class="text-4xl font-bold sm:text-5xl 2xl:text-6xl">
+              Nuestros Servicios
+            </p>
             <div class="h-2 w-64 bg-white"></div>
           </div>
           <div
-            class="mt-8 grid items-center justify-center gap-y-4 sm:gap-y-6 xl:gap-y-8"
+            class="mt-8 grid items-center justify-center gap-y-4 2xl:gap-y-8"
             id="cursos"
           >
             <div class="relative grid items-center gap-x-16 lg:grid-cols-5">
               <div></div>
               <div
-                class="col-span-3 flex flex-col gap-2 rounded-xl bg-white px-4 py-4 text-purple-800"
+                class="col-span-3 flex flex-col gap-2 rounded-xl bg-white p-2 text-purple-800 2xl:p-4"
               >
                 <span
-                  class="text-center text-lg font-bold sm:text-2xl xl:text-5xl"
+                  class="text-center text-lg font-bold sm:text-2xl 2xl:text-5xl"
                   >Reforzamiento en Matemática</span
                 >
-                <span class="text-center sm:text-xl xl:text-2xl"
+                <span class="text-center sm:text-xl 2xl:text-2xl"
                   >Razonamiento Matemático, Geometría, Trigonometría,
                   Aritmética, Álgebra y Estadística</span
                 >
@@ -185,7 +188,7 @@
               <div class="hidden h-16 w-full lg:flex">
                 <img
                   src="assets/matematicas-derecha.png"
-                  class="object-fit h-36 -translate-y-16 rotate-12 xl:h-52"
+                  class="object-fit h-36 -translate-y-16 rotate-12 2xl:h-52"
                 />
               </div>
             </div>
@@ -193,17 +196,17 @@
               <div class="items hidden h-16 w-full justify-end lg:flex">
                 <img
                   src="assets/libro-derecha.png"
-                  class="h-52 -translate-y-24 rotate-12 object-contain"
+                  class="h-36 -translate-y-24 rotate-12 object-contain 2xl:h-52"
                 />
               </div>
               <div
-                class="col-span-3 flex flex-col gap-2 rounded-xl bg-white px-4 py-4 text-purple-800"
+                class="col-span-3 flex flex-col gap-2 rounded-xl bg-white p-2 text-purple-800 2xl:p-4"
               >
                 <span
-                  class="text-center text-lg font-bold sm:text-2xl xl:text-5xl"
+                  class="text-center text-lg font-bold sm:text-2xl 2xl:text-5xl"
                   >Reforzamiento en Letras</span
                 >
-                <span class="text-center sm:text-xl xl:text-2xl"
+                <span class="text-center sm:text-xl 2xl:text-2xl"
                   >Historia Universal, Historia del Perú, Lenguaje, Geografía,
                   entre otros</span
                 >
@@ -212,20 +215,20 @@
             <div class="grid items-center gap-x-16 lg:grid-cols-5">
               <div></div>
               <div
-                class="col-span-3 flex flex-col gap-2 rounded-xl bg-white px-4 py-4 text-purple-800"
+                class="col-span-3 flex flex-col gap-2 rounded-xl bg-white p-2 text-purple-800 2xl:p-4"
               >
                 <span
-                  class="text-center text-lg font-bold sm:text-2xl xl:text-5xl"
+                  class="text-center text-lg font-bold sm:text-2xl 2xl:text-5xl"
                   >Reforzamiento en Ciencias</span
                 >
-                <span class="text-center sm:text-xl xl:text-2xl"
+                <span class="text-center sm:text-xl 2xl:text-2xl"
                   >Física y Química</span
                 >
               </div>
               <div class="hidden h-16 lg:flex">
                 <img
                   src="assets/ciencias.png"
-                  class="object-fit h-36 -translate-y-16 rotate-12 xl:h-52"
+                  class="object-fit h-36 -translate-y-16 rotate-12 2xl:h-52"
                 />
               </div>
             </div>
@@ -233,17 +236,17 @@
               <div class="hidden h-16 w-full justify-end lg:flex">
                 <img
                   src="assets/ingles-derecha.png"
-                  class="object-fit h-48 -translate-y-32 -rotate-12 xl:h-52 xl:-translate-y-24"
+                  class="object-fit h-48 -translate-y-32 -rotate-12 2xl:h-52 2xl:-translate-y-24"
                 />
               </div>
               <div
-                class="col-span-3 flex flex-col gap-2 rounded-xl bg-white px-4 py-4 text-purple-800"
+                class="col-span-3 flex flex-col gap-2 rounded-xl bg-white p-2 text-purple-800 2xl:p-4"
               >
                 <span
-                  class="text-center text-lg font-bold sm:text-2xl xl:text-5xl"
+                  class="text-center text-lg font-bold sm:text-2xl 2xl:text-5xl"
                   >Idioma Extranjero</span
                 >
-                <span class="text-center sm:text-xl xl:text-2xl">Inglés</span>
+                <span class="text-center sm:text-xl 2xl:text-2xl">Inglés</span>
               </div>
               <div></div>
             </div>
@@ -251,19 +254,19 @@
         </div>
       </section>
       <section
-        class="mt-8 flex h-screen flex-col gap-8 px-4 pb-8 pt-32 md:gap-8 lg:px-8 xl:gap-16"
+        class="mt-8 flex h-screen flex-col gap-8 px-4 pb-8 pt-32 md:gap-8 lg:px-8 2xl:gap-16"
         id="somos"
       >
         <div class="flex gap-1 sm:gap-2 sm:px-8 lg:gap-16">
           <div class="flex flex-1 flex-col gap-8 text-white lg:gap-4">
             <div class="flex flex-col gap-6">
-              <p class="text-nowrap text-4xl font-bold sm:text-6xl">
+              <p class="text-4xl font-bold sm:text-5xl 2xl:text-6xl">
                 ¿Quiénes Somos?
               </p>
               <div class="h-2 w-64 bg-white"></div>
             </div>
             <div class="flex items-center">
-              <p class="text-xl sm:text-3xl lg:text-2xl xl:text-4xl">
+              <p class="text-xl sm:text-3xl lg:text-2xl 2xl:text-4xl">
                 Somos una academia, la cual se diferencia por su particular
                 manera de enseñanza. Esta nueva forma de enseñanza tiene como
                 <span class="font-bold text-yellow-300"
@@ -281,11 +284,11 @@
 
         <div class="flex gap-8 lg:gap-16">
           <img
-            class="object-fit my-auto hidden h-52 sm:block lg:h-48 xl:h-56"
+            class="object-fit my-auto hidden h-52 sm:block lg:h-32 2xl:h-56"
             src="assets/maguivel.png"
           />
 
-          <p class="text-xl text-white sm:text-3xl lg:text-2xl xl:text-4xl">
+          <p class="text-xl text-white sm:text-3xl lg:text-2xl 2xl:text-4xl">
             De esa manera, se convierte la enseñanza clásica unilateral a una
             <span class="font-bold text-yellow-300"
               >enseñanza bilateral o multilateral</span
@@ -305,9 +308,9 @@
         class="mt-8 flex flex-col gap-16 px-4 pt-32 sm:h-screen sm:pb-8"
         id="beneficios"
       >
-        <div class="flex flex-col gap-8 xl:gap-12">
+        <div class="flex flex-col gap-8 2xl:gap-12">
           <div class="flex flex-col gap-4 text-white">
-            <p class="max-sm:text-nowrap text-4xl font-bold sm:text-6xl">
+            <p class="text-4xl font-bold sm:text-5xl 2xl:text-6xl">
               Nuestros Beneficios
             </p>
             <div class="h-2 w-64 bg-white"></div>
@@ -323,32 +326,32 @@
                   class="fa-regular fa-calendar text-3xl sm:text-4xl xl:text-6xl"
                 ></i>
                 <p
-                  class="text-center font-bold underline underline-offset-8 sm:text-lg sm:text-xl 2xl:text-3xl"
+                  class="text-center font-bold underline underline-offset-8 sm:text-lg xl:text-lg 2xl:text-3xl"
                 >
                   Horarios Flexibles
                 </p>
               </div>
-              <p class="text-center text-lg 2xl:text-2xl">
+              <p class="text-center text-lg xl:text-sm 2xl:text-2xl">
                 iTutor.Perú se adapta a disponibilidad de tiempo del estudiante.
               </p>
             </div>
 
             <div
-              class="flex flex-col gap-2 rounded-xl bg-white p-4 text-purple-800 sm:col-span-3"
+              class="flex flex-col justify-between gap-2 rounded-xl bg-white p-4 text-purple-800 sm:col-span-3"
             >
               <div class="flex flex-col gap-2">
                 <i
-                  class="fa-regular fa-eye text-3xl sm:text-4xl xl:text-6xl"
+                  class="fa-solid fa-globe text-3xl sm:text-4xl xl:text-6xl"
                 ></i>
                 <p
-                  class="text-center font-bold underline underline-offset-8 sm:text-xl 2xl:text-3xl"
+                  class="text-center font-bold underline underline-offset-8 sm:text-xl xl:text-lg 2xl:text-3xl"
                 >
-                  Seguimiento constante
+                  Conectividad con consultoría de estudio en el extranjero
                 </p>
               </div>
-              <p class="text-center text-lg 2xl:text-2xl">
-                iTutor.Perú le ofrece un seguimiento constante mediante los
-                canales de comunicación
+              <p class="text-center text-lg xl:text-sm 2xl:text-2xl">
+                iTutor.Perú le ofrece descuentos en Samantha Consulting, quien
+                lo ayudará si desea estudiar en el exterior
               </p>
             </div>
             <div
@@ -359,12 +362,12 @@
                   class="fa-solid fa-chart-simple text-3xl sm:text-4xl xl:text-6xl"
                 ></i>
                 <p
-                  class="text-center font-bold underline underline-offset-8 sm:text-xl 2xl:text-3xl"
+                  class="text-center font-bold underline underline-offset-8 sm:text-xl xl:text-lg 2xl:text-3xl"
                 >
                   Evaluaciones personalizadas
                 </p>
               </div>
-              <p class="text-center text-lg 2xl:text-2xl">
+              <p class="text-center text-lg xl:text-sm 2xl:text-2xl">
                 iTutor.Perú realiza evaluaciones personalidazas para ver el
                 desempeño
               </p>
@@ -377,39 +380,39 @@
                   class="fa-solid fa-list-check text-3xl sm:text-4xl xl:text-6xl"
                 ></i>
                 <p
-                  class="text-center font-bold underline underline-offset-8 sm:text-xl 2xl:text-3xl"
+                  class="text-center font-bold underline underline-offset-8 sm:text-xl xl:text-lg 2xl:text-3xl"
                 >
                   Organización personalizada
                 </p>
               </div>
-              <p class="text-center text-lg 2xl:text-2xl">
+              <p class="text-center text-lg xl:text-sm 2xl:text-2xl">
                 iTutor.Perú le crea un horario personalizado al estudiante según
                 sus actividades académicas y no académicas.
               </p>
             </div>
             <div
-              class="flex flex-col justify-between gap-2 rounded-xl bg-white p-4 text-purple-800 sm:col-span-2"
+              class="flex flex-col gap-2 rounded-xl bg-white p-4 text-purple-800 sm:col-span-2"
             >
               <div class="flex flex-col gap-2">
                 <i
-                  class="fa-solid fa-globe text-3xl sm:text-4xl xl:text-6xl"
+                  class="fa-regular fa-eye text-3xl sm:text-4xl xl:text-6xl"
                 ></i>
                 <p
-                  class="text-center font-bold underline underline-offset-8 sm:text-xl 2xl:text-3xl"
+                  class="text-center font-bold underline underline-offset-8 sm:text-xl xl:text-lg 2xl:text-3xl"
                 >
-                  Conectividad con consultoría de estudio en el extranjero
+                  Seguimiento constante
                 </p>
               </div>
-              <p class="text-center text-lg 2xl:text-2xl">
-                iTutor.Perú le ofrece descuentos en Samantha Consulting, quien
-                lo ayudará si desea estudiar en el exterior
+              <p class="text-center text-lg xl:text-sm 2xl:text-2xl">
+                iTutor.Perú le ofrece un seguimiento constante mediante los
+                canales de comunicación
               </p>
             </div>
           </div>
         </div>
       </section>
       <section
-        class="mt-16 flex w-full flex-col px-8 pb-8 sm:mt-8 sm:h-screen sm:gap-8 sm:pt-32 xl:gap-16"
+        class="mt-32 flex min-h-screen w-full flex-col px-8 pb-8 pt-16 sm:gap-8 2xl:gap-16"
         id="contacto"
       >
         <div class="flex w-full flex-col gap-12 xl:gap-16">
@@ -428,7 +431,7 @@
             class="mt-8 flex h-fit flex-col items-center gap-y-2 text-white xl:gap-y-4"
           >
             <img
-              class="h-40 object-contain sm:h-64 xl:h-72 2xl:h-96"
+              class="h-40 object-contain sm:h-64 2xl:h-96"
               src="assets/laptop-derecha.png"
             />
             <div class="flex gap-6" id="redes">
@@ -440,7 +443,7 @@
                 <img
                   src="assets/whatsapp-logo.svg"
                   alt="whatsapp"
-                  class="object-fit h-12 sm:h-20 xl:h-24"
+                  class="object-fit h-12 sm:h-20 2xl:h-24"
                 />
               </a>
               <a
@@ -451,7 +454,7 @@
                 <img
                   src="assets/facebook-logo.svg"
                   alt="facebook"
-                  class="object-fit h-12 sm:h-20 xl:h-24"
+                  class="object-fit h-12 sm:h-20 2xl:h-24"
                 />
               </a>
               <a
@@ -462,31 +465,27 @@
                 <img
                   src="assets/instagram-logo.svg"
                   alt="instagram"
-                  class="object-fit h-12 sm:h-20 xl:h-24"
+                  class="object-fit h-12 sm:h-20 2xl:h-24"
                 />
               </a>
             </div>
           </div>
           <div class="mt-8 flex h-fit flex-col items-center gap-y-4 text-white">
             <img
-              class="h-40 object-contain sm:h-64 xl:h-72 2xl:h-96"
+              class="h-40 object-contain sm:h-64 2xl:h-96"
               src="assets/telefono derecha.png"
             />
 
-            <div id="numeros" class="flex flex-col gap-2 font-bold xl:gap-8">
+            <div
+              id="numeros"
+              class="flex flex-col items-center gap-2 font-bold xl:gap-8"
+            >
               <a
                 href="tel:+51975339804"
                 class="flex items-center gap-4 text-3xl hover:opacity-75 sm:text-4xl xl:text-5xl"
               >
                 <i class="fa-solid fa-phone"></i>
                 <span class="text-nowrap">975 339 804</span>
-              </a>
-              <a
-                href="tel:+51971523514"
-                class="flex items-center gap-4 text-3xl hover:opacity-75 sm:text-4xl xl:text-5xl"
-              >
-                <i class="fa-solid fa-phone"></i>
-                <span class="text-nowrap">971 523 514</span>
               </a>
             </div>
           </div>
